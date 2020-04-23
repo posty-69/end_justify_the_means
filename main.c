@@ -11,11 +11,11 @@ int main(int argc, char *argv[])
 {
     SDL_Surface *ecran=NULL;
 	SDL_Rect position,clipper;
-	int continuer=1,tabV[7],quest=1;
+	int continuer=1,tabV[6],quest=1;
 	SDL_Event event;
-	enigme e[7];
-	init_enigme(e,7);
-	initTabv(tabV,7);
+	enigme e[6];
+	init_enigme(e,6);
+	initTabv(tabV,6);
     SDL_Init(SDL_INIT_VIDEO);
 ecran = SDL_SetVideoMode(2000, 1000 , 32, SDL_HWSURFACE|SDL_RESIZABLE);
 	int i=generation_enigme(e,tabV);
@@ -43,12 +43,12 @@ case SDL_KEYDOWN:
 
 afficher_enigme(e,i,ecran);
 resolution(e,tabV,ecran,i);
-
-
+		
+	
 	SDL_Flip(ecran);
 
 }
-
+ 
 SDL_Quit();
   return EXIT_SUCCESS;
 }
